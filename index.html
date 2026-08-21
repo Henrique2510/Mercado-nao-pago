@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="login">
+        <h2>Entrar</h2>
+
+        <input type="email" id="emailLogin" placeholder="E-mail">
+        <input type="password" id="senhaLogin" placeholder="Senha">
+
+        <button id="btnLogin">Entrar</button>
+
+        <p>
+            Não tem uma conta?
+            <button id="btnMostrarCadastro">Criar conta</button>
+        </p>
+    </div>
+
+
+    <div id="cadastro" style="display: none;">
+        <h2>Criar conta</h2>
+
+        <input type="email" id="emailCadastro" placeholder="E-mail">
+
+        <input type="password" id="senhaCadastro" placeholder="Senha">
+
+        <button id="btnCadastro">Cadastrar</button>
+
+        <p>
+            Já tem uma conta?
+            <button id="btnMostrarLogin">Fazer login</button>
+        </p>
+    </div>
+
+
+    <script type="module" src="./Main.js" ></script>
+
+</body>
+</html>
