@@ -1,0 +1,71 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+
+header {
+    width: 100vw;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: rgb(255, 0, 0);
+    border: 1px black solid;
+}
+
+main {
+    width: 100vw;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border: 1px black solid;
+}
+
+footer {
+    width: 100vw;
+    height: 10vh;
+    align-items: center;
+    justify-content: end;
+    display: flex;
+    gap: 40px;
+    padding-right: 100px ;
+    border: 1px black solid;
+}
+
+#twitter, #instagram, #youtube, #whatsApp{
+    width: 2vw;
+    height: 4vh;
+    align-items: end;
+    display: flex;
+    
+}
+
+#btnCadastro{
+    width: 20vw;
+    height: 10vh;
+    font-size: 22px;
+}
+
+
+#cadastro {
+    width: 50vw;
+    height: 10vh;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+#emailCadastro, #senhaCadastro, #confirmarSenhaCadastro{
+    width: 20vw;
+    height: 10vh;
+    font-size: 20px;
+}

@@ -1,0 +1,27 @@
+.pesquisa {
+    display: flex;
+    width: 400px;
+    height: 40px;
+}
+
+.pesquisa input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.pesquisa button {
+    width: 50px;
+    border: none;
+    background: white;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.pesquisa button:hover {
+    background: #0056b3;
+}
+
