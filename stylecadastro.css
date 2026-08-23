@@ -16,7 +16,6 @@ header {
     align-items: center;
     display: flex;
     background-color: rgb(255, 0, 0);
-    border: 1px black solid;
 }
 
 main {
@@ -25,7 +24,6 @@ main {
     justify-content: center;
     align-items: center;
     display: flex;
-    border: 1px black solid;
 }
 
 footer {
@@ -36,7 +34,6 @@ footer {
     display: flex;
     gap: 40px;
     padding-right: 100px ;
-    border: 1px black solid;
 }
 
 #twitter, #instagram, #youtube, #whatsApp{
