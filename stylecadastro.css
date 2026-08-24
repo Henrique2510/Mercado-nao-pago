@@ -1,31 +1,27 @@
+/* Parte inteira do site */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: "Nunito", sans-serif;
     font-optical-sizing: auto;
-    font-weight: weight;
+    font-weight: 400;
     font-style: normal;
 }
 
 
-header {
-    width: 100vw;
-    height: 10vh;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    background-color: rgb(255, 0, 0);
-}
-
+/* Formatação do Main */
 main {
     width: 100vw;
-    height: 80vh;
+    height: 90vh;
     justify-content: center;
     align-items: center;
     display: flex;
+    background-color: antiquewhite;
+    background: linear-gradient(rgb(255, 145, 0), rgb(231, 198, 155), rgb(255, 145, 0));
 }
 
+/* Formatação do Footer*/
 footer {
     width: 100vw;
     height: 10vh;
@@ -33,36 +29,145 @@ footer {
     justify-content: end;
     display: flex;
     gap: 40px;
-    padding-right: 100px ;
+    padding-right: 100px;
+    background: #FF9100;
 }
 
-#twitter, #instagram, #youtube, #whatsApp{
+
+/* Formatação das redes sociais*/
+#twitter,
+#instagram,
+#youtube,
+#whatsApp {
     width: 2vw;
     height: 4vh;
     align-items: end;
     display: flex;
-    
 }
 
-#btnCadastro{
-    width: 20vw;
-    height: 10vh;
-    font-size: 22px;
+/* Container dos ícones no Footer */
+.redes-sociais {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
 }
 
-
-#cadastro {
-    width: 50vw;
-    height: 10vh;
-    flex-direction: column;
+/* O círculo preto ao redor de cada ícone */
+.icone-social {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    width: 40px;
+    height: 40px;
+    background-color: #FF9100;
+    /* Cor escura do fundo */
+    color: #ffffff;
+    /* Cor branca do ícone */
+    border-radius: 50%;
+    /* Faz ficar perfeitamente redondo */
+    text-decoration: none;
+    font-size: 18px;
+    /* Controla o tamanho do ícone interno */
+    transition: transform 0.2s, background-color 0.2s;
 }
 
-#emailCadastro, #senhaCadastro, #confirmarSenhaCadastro{
+.icone-social:hover {
+    transform: scale(1.1);
+    background-color: #333333;
+}
+
+/* Formatação das ações do botão de cadastro (Efeitos Laranja do Login) */
+#btnCadastro:hover {
+    background-color: rgb(252, 149, 6);
+    transition: 0.2s;
+    background: #ff7904;
+    transform: scale(1.027);
+}
+
+#btnCadastro:active {
+    transform: scale(0.92);
+    transition: transform 0.1s;
+    background: #ff9100;
+    color: #1a1a2e;
+}
+
+/* Formatação do botão de cadastro (Igual ao Login) */
+#btnCadastro {
     width: 20vw;
-    height: 10vh;
-    font-size: 20px;
+    font-size: 22px;
+    background-color: rgb(255, 145, 0);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.10);
+    font-weight: bold;
+    color: white;
+    transform: translateX(3px);
+    border-radius: 100px;
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    transition: all 0.5s ease;
+}
+
+/* Formatação da div principal (Caixa Branca igual ao Login) */
+#cadastro {
+    width: 95vw;
+    max-width: 550px;
+    min-height: auto;
+    padding: 50px 40px;
+    margin: 40px auto;
+    background-color: #fff;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    box-sizing: border-box;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.10);
+}
+
+/* Força os inputs e o botão a terem o tamanho controlado */
+#cadastro input,
+#cadastro button {
+    width: 90%;
+    max-width: 300px;
+    height: 45px;
+    box-sizing: border-box;
+}
+
+/* Formatação dos inputs de cadastro (Estilo cinza do Login) */
+#emailCadastro,
+#senhaCadastro,
+#confirmarSenhaCadastro {
+    width: 100%;
+    max-width: 340px;
+    height: 50px;
+    padding: 0 20px;
+    font-size: 16px;
+
+    background-color: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+
+    color: #334155;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+/* Efeito de Destaque no clique (Foco Laranja corrigido e igual ao Login) */
+#emailCadastro:focus,
+#senhaCadastro:focus,
+#confirmarSenhaCadastro:focus {
+    outline: none;
+}
+
+/* Decoração do texto de ajuda (Placeholder) */
+#emailCadastro::placeholder,
+#senhaCadastro::placeholder,
+#confirmarSenhaCadastro::placeholder {
+    color: #94a3b8;
+}
+
+/* Formatação da logo */
+#logo {
+    width: 27vw;
+    height: 18vh;
 }

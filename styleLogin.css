@@ -1,3 +1,4 @@
+/* Parte inteira do site */
 * {
     padding: 0;
     margin: 0;
@@ -9,23 +10,21 @@
 }
 
 
-header {
-    width: 100vw;
-    height: 10vh;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    background-color: rgb(255, 0, 0);
-}
 
+
+/* Formatação do Main */
 main {
     width: 100vw;
-    height: 80vh;
+    height: 90vh;
     justify-content: center;
     align-items: center;
     display: flex;
+    background-color: antiquewhite;
+    background: linear-gradient(rgb(255, 145, 0), rgb(231, 198, 155), rgb(255, 145, 0));
 }
 
+
+/* Formatação do Footer*/
 footer {
     width: 100vw;
     height: 10vh;
@@ -34,8 +33,11 @@ footer {
     display: flex;
     gap: 40px;
     padding-right: 100px;
+    background: #FF9100;
 }
 
+
+/* Formatação das redes sociais*/
 #twitter,
 #instagram,
 #youtube,
@@ -44,55 +46,172 @@ footer {
     height: 4vh;
     align-items: end;
     display: flex;
-
 }
 
+
+/* Formatação das ações do botão*/
 #btnLogin:hover {
-    background-color: red;
-    transition: 1s;
+    background-color: rgb(252, 149, 6);
+    transition: 0.2s;
+    background: #ff7904;
+    transform: scale(1.027);
 
 }
 
+#btnLogin:active {
+    transform: scale(0.92);
+    transition: transform 0.1s;
+    background: #ff9100;
+    color: #1a1a2e;
+}
+
+
+/* Formatação do botão*/
 #btnLogin {
     width: 20vw;
     font-size: 22px;
     background-color: rgb(255, 145, 0);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.10);
+    ;
     font-weight: bold;
-    border-color: rgb(255, 145, 0);
-    border-radius: 9px;
+    color: white;
+    transform: translateX(3px);
+    border-radius: 15px;
+    border-radius: 100px;
     cursor: pointer;
     border: none;
     padding: 10px;
-
-
+    transition: all 0.5s ease
 }
 
+
+/* Formatação da div*/
 #login {
-    width: 50vw;
-    height: 10vh;
-    flex-direction: column;
+    width: 95vw;
+    max-width: 550px;
+    /* Sua caixa branca maior */
+    min-height: auto;
+    padding: 50px 40px;
+    margin: 40px auto;
+    background-color: #fff;
+    border-radius: 16px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 30px;
-
-
-
-
+    gap: 25px;
+    box-sizing: border-box;
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.10);
 }
 
+/* Força os inputs e o botão a terem um tamanho fixo e controlado */
+#login input,
+#login button {
+    width: 90%;
+    /* Ocupa o espaço disponível, mas respeita o limite abaixo */
+    max-width: 300px;
+    /* Define o tamanho máximo ideal dos campos na tela */
+    height: 45px;
+    /* Define uma altura padrão e confortável para clicar/digitar */
+    box-sizing: border-box;
+    /* Evita que bordas internas quebrem o tamanho */
+}
+
+
+/* Formatação dos inputs*/
 #emailLogin,
 #senhaLogin {
-    width: 20vw;
-    height: 10vh;
-    font-size: 20px;
-    border-radius: 100px;
+    width: 100%;
+    /* Ocupa o espaço total permitido pela caixa pai */
+    max-width: 340px;
+    /* Garante que os campos tenham um tamanho fixo elegante */
+    height: 50px;
+    /* Altura ideal e ergonômica para cliques e digitação */
+    padding: 0 20px;
+    /* Afasta o texto digitado das bordas laterais */
+    font-size: 16px;
+    /* Tamanho de fonte padrão para leitura confortável */
+
+    /* Cores e Bordas Decoradas */
+    background-color: #f8fafc;
+    /* Fundo cinza bem claro e suave */
+    border: 1px solid #cbd5e1;
+    /* Contorno discreto moderno (em vez de preto grosso) */
+    border-radius: 8px;
+    /* Cantos levemente arredondados, estilo interfaces premium */
+
+    color: #334155;
+    /* Cor do texto digitado */
+    box-sizing: border-box;
+    /* Impede o padding de quebrar o tamanho do input */
+    transition: all 0.3s ease;
+    /* Efeito suave na troca de cores */
 }
 
+/* Efeito de Destaque quando o usuário clica no campo */
+#emailLogin:focus,
+#senhaLogin:focus {
+    background-color: #ffffff;
+    /* O fundo clareia para indicar atividade */
+    border-color: 255, 145, 0;
+    /* O contorno muda para um azul/roxo tecnológico moderno */
+    box-shadow: 255, 145, 0;
+    /* Cria uma aura suave ao redor */
+    outline: none;
+    /* Remove a linha padrão feia do navegador */
+}
+
+/* Decoração do texto de ajuda (Placeholder) */
+#emailLogin::placeholder,
+#senhaLogin::placeholder {
+    color: #94a3b8;
+    /* Cor cinza clara para o texto "E-mail" e "Senha" */
+}
 
 
 input {
     width: 100%;
     height: 10px;
     padding: 10px 16px;
+}
+
+
+/* Formatação da logo */
+#logo {
+    width: 27vw;
+    height: 18vh;
+}
+
+/* Container que segura todos os ícones inline */
+.redes-sociais {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* O círculo preto ao redor de cada ícone */
+.icone-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #FF9100;
+    /* Cor escura do fundo */
+    color: #ffffff;
+    /* Cor branca do ícone */
+    border-radius: 50%;
+    /* Faz ficar perfeitamente redondo */
+    text-decoration: none;
+    font-size: 18px;
+    /* Controla o tamanho do ícone interno */
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+/* Efeito sutil ao passar o mouse por cima */
+.icone-social:hover {
+    transform: scale(1.1);
+    /* Aumenta levemente de tamanho */
+    background-color: #945502;
+    /* Clarea levemente o fundo */
 }

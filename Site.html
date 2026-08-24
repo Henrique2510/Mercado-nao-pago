@@ -1,23 +1,350 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href=".css">
+    <title>CartHub.com</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="StyleSite.css">
+    <link rel="icon" href="./Hub.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
+
     <header>
-        <div id="Direito">   <!-- perfil -->
+        <div class="header-top">
+            <img id="logo" src="./HubLogo.png" alt="Logo do site">
 
+            <div id="Pesquisa">
+                <input type="text" id="campo-pesquisa" placeholder="Pesquisar produtos...">
+                <button id="btn-pesquisa" type="button">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+        </div>
 
-        </div>
-        <div class="pesquisa"> <!-- Barra de Pesquisa -->
-            <input type="text" placeholder="Pesquisar...">
-            <button>🔍</button>
-        </div>
+        <nav class="header-nav">
+            <a href="#" id="nav-inicio">
+                <i class="fa-solid fa-house"></i>
+                Início
+            </a>
+            <a href="#">
+                <i class="fa-solid fa-layer-group"></i>
+                Categorias
+            </a>
+            <a href="#">
+                <i class="fa-solid fa-tag"></i>
+                Ofertas
+            </a>
+            <a href="#">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Carrinho
+            </a>
+        </nav>
     </header>
-    
+
+    <main>
+
+        <div id="area-esquerda">
+
+            <div class="perfil">
+                <img id="foto-perfil" src="perfil.jpg" alt="Foto do perfil" referrerPolicy="no-referrer">
+                <h2 id="nome-usuario">Nome do Usuário</h2>
+                <p id="tag-usuario">@usuario</p>
+            </div>
+
+            <div class="painel-vendedor">
+                <h3>Área do vendedor</h3>
+
+                <button id="btn-adicionar-produto" class="botao-vendedor" type="button">
+                    <i class="fa-solid fa-plus"></i>
+                    Adicionar produto
+                </button>
+
+                <button id="btn-meus-produtos" class="botao-vendedor" type="button">
+                    <i class="fa-solid fa-box"></i>
+                    Meus produtos
+                </button>
+
+                <button id="btn-minhas-vendas" class="botao-vendedor" type="button">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Minhas vendas
+                </button>
+
+                <button id="btn-produtos-vendidos" class="botao-vendedor" type="button">
+                    <i class="fa-solid fa-check"></i>
+                    Produtos vendidos
+                </button>
+            </div>
+        </div>
+
+        <div class="area-direita">
+
+            <!-- MARKETPLACE -->
+            <div class="tela ativa" id="tela-marketplace">
+                <div class="marketplace">
+
+                    <div class="marketplace-header">
+                        <div>
+                            <h2>Marketplace</h2>
+                        </div>
+
+                        <div class="filtros">
+
+                            <div class="filtro-custom">
+                                <button class="filtro-botao" id="botao-categoria" type="button">
+                                    <span>
+                                        <i class="fa-solid fa-layer-group"></i>
+                                        Todas as categorias
+                                    </span>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </button>
+
+                                <div class="filtro-menu" id="menu-categoria">
+                                    <button type="button" data-value="todos">
+                                        <i class="fa-solid fa-layer-group"></i>
+                                        Todas as categorias
+                                    </button>
+                                    <button type="button" data-value="eletronicos">
+                                        <i class="fa-solid fa-mobile-screen"></i>
+                                        Eletrônicos
+                                    </button>
+                                    <button type="button" data-value="roupas">
+                                        <i class="fa-solid fa-shirt"></i>
+                                        Roupas
+                                    </button>
+                                    <button type="button" data-value="calcados">
+                                        <i class="fa-solid fa-shoe-prints"></i>
+                                        Calçados
+                                    </button>
+                                    <button type="button" data-value="outros">
+                                        <i class="fa-solid fa-box"></i>
+                                        Outros
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="filtro-custom">
+                                <button class="filtro-botao" id="botao-ordenacao" type="button">
+                                    <span>
+                                        <i class="fa-solid fa-arrow-down-wide-short"></i>
+                                        Mais recentes
+                                    </span>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </button>
+
+                                <div class="filtro-menu" id="menu-ordenacao">
+                                    <button type="button" data-value="recentes">
+                                        <i class="fa-solid fa-clock"></i>
+                                        Mais recentes
+                                    </button>
+                                    <button type="button" data-value="menor-preco">
+                                        <i class="fa-solid fa-arrow-down"></i>
+                                        Menor preço
+                                    </button>
+                                    <button type="button" data-value="maior-preco">
+                                        <i class="fa-solid fa-arrow-up"></i>
+                                        Maior preço
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div id="produtos-container" class="produtos"></div>
+
+                    <div id="sem-produtos" class="sem-produtos">
+                        <i class="fa-solid fa-box-open"></i>
+                        <h3>Nenhum produto encontrado</h3>
+                        <p>Os produtos colocados à venda aparecerão aqui.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ADICIONAR PRODUTO -->
+            <div class="tela" id="tela-adicionar-produto">
+                <div class="adicionar-produto">
+
+                    <div class="cabecalho-formulario">
+                        <button id="btn-voltar-marketplace" class="botao-voltar" type="button">
+                            <i class="fa-solid fa-arrow-left"></i>
+                            Voltar ao Marketplace
+                        </button>
+
+                        <h2>Adicionar produto</h2>
+                        <p>Cadastre um produto para colocar à venda.</p>
+                    </div>
+
+                    <form id="form-produto">
+
+                        <div class="campo">
+                            <label for="foto-produto">Foto do produto</label>
+                            <input type="file" id="foto-produto" accept="image/*">
+                            <small>Escolha uma imagem do produto.</small>
+                        </div>
+
+                        <div class="campo">
+                            <label for="nome-produto">Nome do produto</label>
+                            <input type="text" id="nome-produto" placeholder="Ex: Tênis esportivo" required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="descricao-produto">Descrição</label>
+                            <textarea id="descricao-produto" placeholder="Descreva o produto..." required></textarea>
+                        </div>
+
+                        <div class="campo">
+                            <label>Categoria</label>
+
+                            <div class="filtro-custom categoria-produto-custom">
+
+                                <button class="filtro-botao" id="botao-categoria-produto" type="button">
+                                    <span>
+                                        <i class="fa-solid fa-layer-group"></i>
+                                        <span id="categoria-produto-texto">Selecione uma categoria</span>
+                                    </span>
+
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </button>
+
+                                <div class="filtro-menu" id="menu-categoria-produto">
+
+                                    <button type="button" data-value="eletronicos">
+                                        <i class="fa-solid fa-mobile-screen"></i>
+                                        Eletrônicos
+                                    </button>
+
+                                    <button type="button" data-value="roupas">
+                                        <i class="fa-solid fa-shirt"></i>
+                                        Roupas
+                                    </button>
+
+                                    <button type="button" data-value="calcados">
+                                        <i class="fa-solid fa-shoe-prints"></i>
+                                        Calçados
+                                    </button>
+
+                                    <button type="button" data-value="moveis">
+                                        <i class="fa-solid fa-couch"></i>
+                                        Móveis
+                                    </button>
+
+                                    <button type="button" data-value="outros">
+                                        <i class="fa-solid fa-box"></i>
+                                        Outros
+                                    </button>
+
+                                </div>
+
+                                <input type="hidden" id="categoria-produto" required>
+
+                            </div>
+                        </div>
+
+                        <div class="campo">
+                            <label for="preco-produto">Preço</label>
+                            <div class="campo-preco">
+                                <span>R$</span>
+                                <input type="number" id="preco-produto" placeholder="0,00" min="0" step="0.01" required>
+                            </div>
+                        </div>
+
+                        <div class="campo">
+                            <label for="quantidade-produto">Quantidade disponível</label>
+                            <input type="number" id="quantidade-produto" placeholder="Ex: 10" min="1" required>
+                        </div>
+
+                        <div class="botoes-formulario">
+                            <button type="button" id="btn-cancelar-produto" class="botao-cancelar">
+                                Cancelar
+                            </button>
+
+                            <button type="submit" class="botao-publicar">
+                                <i class="fa-solid fa-plus"></i>
+                                Publicar produto
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+            <!-- MEUS PRODUTOS -->
+            <div class="tela" id="tela-meus-produtos">
+                <div class="pagina-vendedor">
+                    <h2>
+                        <i class="fa-solid fa-box"></i>
+                        Meus produtos
+                    </h2>
+
+                    <p>Aqui aparecerão os produtos que você colocou à venda.</p>
+
+                    <div class="conteudo-vazio">
+                        <i class="fa-solid fa-box-open"></i>
+                        <h3>Você ainda não possui produtos</h3>
+                        <p>Adicione seu primeiro produto para começar a vender.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MINHAS VENDAS -->
+            <div class="tela" id="tela-minhas-vendas">
+                <div class="pagina-vendedor">
+                    <h2>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        Minhas vendas
+                    </h2>
+
+                    <p>Aqui aparecerão suas vendas em andamento.</p>
+
+                    <div class="conteudo-vazio">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <h3>Nenhuma venda</h3>
+                        <p>Quando alguém comprar um produto seu, ele aparecerá aqui.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUTOS VENDIDOS -->
+            <div class="tela" id="tela-produtos-vendidos">
+                <div class="pagina-vendedor">
+                    <h2>
+                        <i class="fa-solid fa-check"></i>
+                        Produtos vendidos
+                    </h2>
+
+                    <p>Histórico dos produtos que você já vendeu.</p>
+
+                    <div class="conteudo-vazio">
+                        <i class="fa-solid fa-receipt"></i>
+                        <h3>Nenhum produto vendido</h3>
+                        <p>Seu histórico de vendas aparecerá aqui.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 Cart Hub</p>
+        <a href="#">Política de privacidade</a>
+        <a href="https://wa.me/555492477483" target="_blank">
+            Contato
+        </a>
+    </footer>
+
+
+
 </body>
+
 </html>
