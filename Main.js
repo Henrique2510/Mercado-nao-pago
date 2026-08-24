@@ -1,3 +1,50 @@
+import { database, auth } from "./firebaseConfig.js";
+import { cadastrarUsuario } from "./auth.js";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const nav = document.querySelector(".header-nav");
 
 window.addEventListener("scroll", function () {
