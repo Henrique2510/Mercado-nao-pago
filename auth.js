@@ -206,7 +206,7 @@ async function fazerLogin() {
         );
 
 
-        window.location.href = "./Site.html";
+        window.location.href = "./index.html";
 
 
     } catch (erro) {
