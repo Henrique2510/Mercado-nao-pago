@@ -4,12 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Cadastrar</title>
+
     <link rel="stylesheet" href="./stylecadastro.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
-        rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
     <link rel="icon" href="./Hub.png">
 </head>
 
@@ -24,11 +37,47 @@
             <img id="logo" src="./HubLogo.png" alt="">
             <h2>Criar conta</h2>
 
-            <input type="" id="usuario" placeholder="Nome de Usuário" maxlength="30" minlength="3"
-                title="Mínimo 3 caracteres, máximo 30" required>
+            <input type="" id="usuario" placeholder="Nome de Usuário" maxlength="30" minlength="3" title="Mínimo 3 caracteres, máximo 30" required>
             <input type="email" id="emailCadastro" placeholder="E-mail" required>
-            <input type="password" id="senhaCadastro" placeholder="Senha" minlength="8" required>
-            <input type="password" id="confirmarSenhaCadastro" placeholder="Confirmar Senha" minlength="8" required>
+
+
+           <div class="campo-senha-cadastro">
+    <input
+        type="password"
+        id="senhaCadastro"
+        placeholder="Senha"
+        minlength="8"
+        required
+    >
+
+    <button
+        type="button"
+        class="mostrar-senha-cadastro"
+        data-target="senhaCadastro"
+        aria-label="Mostrar senha"
+    >
+        <i class="fa-solid fa-eye"></i>
+    </button>
+</div>
+
+<div class="campo-senha-cadastro">
+    <input
+        type="password"
+        id="confirmarSenhaCadastro"
+        placeholder="Confirmar Senha"
+        minlength="8"
+        required
+    >
+
+    <button
+        type="button"
+        class="mostrar-senha-cadastro"
+        data-target="confirmarSenhaCadastro"
+        aria-label="Mostrar senha"
+    >
+        <i class="fa-solid fa-eye"></i>
+    </button>
+</div>
 
             <button id="btnCadastro">Cadastrar</button>
 
@@ -76,7 +125,7 @@
     </footer>
 
 
-    <script type="module" src="./Main.js"></script>
+    <script type="module" src="./auth.js"></script>
     <a href="Login.html"></a> <!-- Ir para a segunda pagina -->
 
 </body>

@@ -3,85 +3,256 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
     <title>Login</title>
-    <link rel="stylesheet" href="styleLogin.css">
+
+    <!-- CSS -->
+    <link
+        rel="stylesheet"
+        href="./styleLogin.css"
+    >
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
-        rel="stylesheet">
-    <link rel="icon" href="./Hub.png">
-    <link rel="stylesheet" href="https://cloudflare.com"
-        integrity="sha512-Kc3d3mGXcQZi5Li31lAL5UUa75qh15AMYqV456tHzleOlk658aL55p5axM4mR1V6QN3rY35fxdOl8bZJwoA2Ng=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Ícone do site -->
+    <link
+        rel="icon"
+        href="./Hub.png"
+    >
+</head>
 
 
 <body>
-    <header>
 
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header>
     </header>
+
+
+    <!-- =====================================================
+         LOGIN
+         ===================================================== -->
+
     <main>
+
         <div id="login">
-            <img id="logo" src="./HubLogo.png" alt="">
+
+            <!-- Logo -->
+            <img
+                id="logo"
+                src="./HubLogo.png"
+                alt="Hub Logo"
+            >
+
+            <!-- Título -->
             <h2>Entrar</h2>
 
 
-            <input type="email" id="emailLogin" placeholder="E-mail" required>
-            <input type="password" id="senhaLogin" placeholder="Senha" minlength="8" required>
+            <!-- E-mail -->
+            <input
+                type="email"
+                id="emailLogin"
+                placeholder="E-mail"
+                autocomplete="email"
+                required
+            >
 
-            <button id="btnLogin">Continuar</button>
 
+            <!-- =================================================
+                 SENHA
+                 ================================================= -->
+
+            <div class="campo-senha-login">
+
+                <input
+                    type="password"
+                    id="senhaLogin"
+                    placeholder="Senha"
+                    minlength="8"
+                    autocomplete="current-password"
+                    required
+                >
+
+                <!-- Botão mostrar senha -->
+                <button
+                    type="button"
+                    id="mostrarSenhaLogin"
+                    aria-label="Mostrar senha"
+                    title="Mostrar senha"
+                >
+                    <i class="fa-solid fa-eye"></i>
+                </button>
+
+            </div>
+
+
+            <!-- =================================================
+                 BOTÃO LOGIN
+                 ================================================= -->
+
+            <button
+                type="button"
+                id="btnLogin"
+            >
+                Continuar
+            </button>
+
+
+            <!-- Criar conta -->
             <p>
                 Não tem uma conta?
-                <a href="./indexcadastro.html" id="criarConta">Criar conta</a>
+
+                <a
+                    href="./indexcadastro.html"
+                    id="criarConta"
+                >
+                    Criar conta
+                </a>
             </p>
 
         </div>
+
     </main>
 
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
     <footer>
+
         <div class="redes-sociais">
-            <!-- X (Twitter) -->
-            <a href="#" class="icone-social x-twitter">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+
+            <!-- X / Twitter -->
+            <a
+                href="#"
+                class="icone-social x-twitter"
+                aria-label="X"
+            >
+
+                <svg
+                    viewBox="0 0 24 24"
+                    width="18"
+                    height="18"
+                    fill="currentColor"
+                >
+
                     <path
-                        d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                    />
+
                 </svg>
+
             </a>
+
 
             <!-- Instagram -->
-            <a href="#" class="icone-social instagram">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+            <a
+                href="#"
+                class="icone-social instagram"
+                aria-label="Instagram"
+            >
+
+                <svg
+                    viewBox="0 0 24 24"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                >
+
                     <path
-                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
+                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.28-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919C8.416.014 8.796 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324z"
+                    />
+
                 </svg>
+
             </a>
+
 
             <!-- YouTube -->
-            <a href="#" class="icone-social youtube">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+            <a
+                href="#"
+                class="icone-social youtube"
+                aria-label="YouTube"
+            >
+
+                <svg
+                    viewBox="0 0 24 24"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                >
+
                     <path
-                        d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                        d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                    />
+
                 </svg>
+
             </a>
+
 
             <!-- WhatsApp -->
-            <a href="#" class="icone-social whatsapp">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+            <a
+                href="#"
+                class="icone-social whatsapp"
+                aria-label="WhatsApp"
+            >
+
+                <svg
+                    viewBox="0 0 24 24"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                >
+
                     <path
-                        d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.733-1.455L0 24zm6.59-4.846c1.66.986 3.288 1.479 4.825 1.48 5.523 0 10.017-4.493 10.02-10.02.002-2.677-1.04-5.193-2.93-7.086-1.892-1.892-4.41-2.934-7.098-2.935-5.528 0-10.025 4.493-10.028 10.022-.001 1.707.457 3.376 1.328 4.884l-.99 3.613 3.702-.97c.002 0 .003-.001.003-.001z" />
+                        d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.733-1.455L0 24z"
+                    />
+
                 </svg>
+
             </a>
-        </div>
 
         </div>
-
 
     </footer>
 
 
-    <script type="module" src="./Main.js"></script>
-    <a href="Login.html"></a> <!-- Ir para a segunda pagina -->
+    <!-- =====================================================
+         JAVASCRIPT / FIREBASE
+         ===================================================== -->
+
+    <script
+        type="module"
+        src="./auth.js"
+    ></script>
 
 </body>
 

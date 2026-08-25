@@ -1,217 +1,451 @@
-/* Parte inteira do site */
+/* =========================================================
+   CONFIGURAÇÃO GERAL
+   ========================================================= */
+
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: "Nunito", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    overflow-x: hidden;
 }
 
 
+/* =========================================================
+   MAIN
+   ========================================================= */
 
-
-/* Formatação do Main */
 main {
-    width: 100vw;
-    height: 90vh;
+    width: 100%;
+    min-height: 90vh;
+
+    display: flex;
+    align-items: center;
     justify-content: center;
-    align-items: center;
-    display: flex;
-    background-color: antiquewhite;
-    background: linear-gradient(rgb(255, 145, 0), rgb(231, 198, 155), rgb(255, 145, 0));
+
+    padding: 30px 20px;
+
+    background: linear-gradient(
+        rgb(255, 145, 0),
+        rgb(231, 198, 155),
+        rgb(255, 145, 0)
+    );
 }
 
 
-/* Formatação do Footer*/
-footer {
-    width: 100vw;
-    height: 10vh;
-    align-items: center;
-    justify-content: end;
-    display: flex;
-    gap: 40px;
-    padding-right: 100px;
-    background: #FF9100;
-}
+/* =========================================================
+   CAIXA DE LOGIN
+   ========================================================= */
 
-
-/* Formatação das redes sociais*/
-#twitter,
-#instagram,
-#youtube,
-#whatsApp {
-    width: 2vw;
-    height: 4vh;
-    align-items: end;
-    display: flex;
-}
-
-
-/* Formatação das ações do botão*/
-#btnLogin:hover {
-    background-color: rgb(252, 149, 6);
-    transition: 0.2s;
-    background: #ff7904;
-    transform: scale(1.027);
-
-}
-
-#btnLogin:active {
-    transform: scale(0.92);
-    transition: transform 0.1s;
-    background: #ff9100;
-    color: #1a1a2e;
-}
-
-
-/* Formatação do botão*/
-#btnLogin {
-    width: 20vw;
-    font-size: 22px;
-    background-color: rgb(255, 145, 0);
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.10);
-    ;
-    font-weight: bold;
-    color: white;
-    transform: translateX(3px);
-    border-radius: 15px;
-    border-radius: 100px;
-    cursor: pointer;
-    border: none;
-    padding: 10px;
-    transition: all 0.5s ease
-}
-
-
-/* Formatação da div*/
 #login {
-    width: 95vw;
-    max-width: 550px;
-    /* Sua caixa branca maior */
-    min-height: auto;
-    padding: 50px 40px;
-    margin: 40px auto;
-    background-color: #fff;
-    border-radius: 16px;
+    width: 100%;
+    max-width: 420px;
+
+    padding: 40px 35px;
+
+    background: #ffffff;
+
+    border-radius: 18px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 25px;
-    box-sizing: border-box;
+
+    gap: 20px;
+
     box-shadow:
-        0 3px 10px rgba(0, 0, 0, 0.10);
-}
-
-/* Força os inputs e o botão a terem um tamanho fixo e controlado */
-#login input,
-#login button {
-    width: 90%;
-    /* Ocupa o espaço disponível, mas respeita o limite abaixo */
-    max-width: 300px;
-    /* Define o tamanho máximo ideal dos campos na tela */
-    height: 45px;
-    /* Define uma altura padrão e confortável para clicar/digitar */
-    box-sizing: border-box;
-    /* Evita que bordas internas quebrem o tamanho */
+        0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 
-/* Formatação dos inputs*/
-#emailLogin,
-#senhaLogin {
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+#logo {
+    width: 220px;
+    height: auto;
+
+    object-fit: contain;
+
+    margin-bottom: 5px;
+}
+
+
+/* =========================================================
+   TÍTULO
+   ========================================================= */
+
+#login h2 {
+    font-size: 30px;
+    color: #333;
+
+    margin-bottom: 5px;
+}
+
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
+#emailLogin {
     width: 100%;
-    /* Ocupa o espaço total permitido pela caixa pai */
-    max-width: 340px;
-    /* Garante que os campos tenham um tamanho fixo elegante */
     height: 50px;
-    /* Altura ideal e ergonômica para cliques e digitação */
-    padding: 0 20px;
-    /* Afasta o texto digitado das bordas laterais */
+
+    padding: 0 16px;
+
     font-size: 16px;
-    /* Tamanho de fonte padrão para leitura confortável */
+    color: #333;
 
-    /* Cores e Bordas Decoradas */
-    background-color: #f8fafc;
-    /* Fundo cinza bem claro e suave */
+    background: #f8fafc;
+
     border: 1px solid #cbd5e1;
-    /* Contorno discreto moderno (em vez de preto grosso) */
     border-radius: 8px;
-    /* Cantos levemente arredondados, estilo interfaces premium */
 
-    color: #334155;
-    /* Cor do texto digitado */
-    box-sizing: border-box;
-    /* Impede o padding de quebrar o tamanho do input */
-    transition: all 0.3s ease;
-    /* Efeito suave na troca de cores */
-}
-
-/* Efeito de Destaque quando o usuário clica no campo */
-#emailLogin:focus,
-#senhaLogin:focus {
-    background-color: #ffffff;
-    /* O fundo clareia para indicar atividade */
-    border-color: 255, 145, 0;
-    /* O contorno muda para um azul/roxo tecnológico moderno */
-    box-shadow: 255, 145, 0;
-    /* Cria uma aura suave ao redor */
     outline: none;
-    /* Remove a linha padrão feia do navegador */
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
 }
 
-/* Decoração do texto de ajuda (Placeholder) */
+
+/* =========================================================
+   INPUT DE SENHA
+   ========================================================= */
+
+.campo-senha-login {
+    position: relative;
+
+    width: 100%;
+    height: 50px;
+}
+
+
+.campo-senha-login #senhaLogin {
+    width: 100%;
+    height: 50px;
+
+    padding: 0 50px 0 16px;
+
+    font-size: 16px;
+    color: #333;
+
+    background: #f8fafc;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
+
+
+/* =========================================================
+   EFEITO DOS INPUTS
+   ========================================================= */
+
+#emailLogin:focus,
+.campo-senha-login #senhaLogin:focus {
+    background: #ffffff;
+
+    border-color: rgb(255, 145, 0);
+
+    box-shadow:
+        0 0 0 3px rgba(255, 145, 0, 0.15);
+
+    outline: none;
+}
+
+
+/* =========================================================
+   PLACEHOLDER
+   ========================================================= */
+
 #emailLogin::placeholder,
 #senhaLogin::placeholder {
     color: #94a3b8;
-    /* Cor cinza clara para o texto "E-mail" e "Senha" */
 }
 
 
-input {
-    width: 100%;
-    height: 10px;
-    padding: 10px 16px;
-}
+/* =========================================================
+   BOTÃO DO OLHO
+   ========================================================= */
 
+#mostrarSenhaLogin {
+    position: absolute;
 
-/* Formatação da logo */
-#logo {
-    width: 27vw;
-    height: 18vh;
-}
+    top: 50%;
+    right: 7px;
 
-/* Container que segura todos os ícones inline */
-.redes-sociais {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-}
+    transform: translateY(-50%);
 
-/* O círculo preto ao redor de cada ícone */
-.icone-social {
+    width: 38px !important;
+    height: 38px !important;
+
+    min-width: 38px;
+    max-width: 38px;
+
+    padding: 0 !important;
+    margin: 0;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
-    background-color: #FF9100;
-    /* Cor escura do fundo */
-    color: #ffffff;
-    /* Cor branca do ícone */
+
+    background: transparent;
+
+    border: none;
+
     border-radius: 50%;
-    /* Faz ficar perfeitamente redondo */
-    text-decoration: none;
-    font-size: 18px;
-    /* Controla o tamanho do ícone interno */
-    transition: transform 0.2s, background-color 0.2s;
+
+    color: #777;
+
+    cursor: pointer;
+
+    font-size: 17px;
+
+    box-shadow: none;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
 }
 
-/* Efeito sutil ao passar o mouse por cima */
+
+/* =========================================================
+   HOVER DO OLHO
+   ========================================================= */
+
+#mostrarSenhaLogin:hover {
+    background: rgba(255, 145, 0, 0.12);
+
+    color: rgb(255, 145, 0);
+
+    transform: translateY(-50%);
+}
+
+
+/* =========================================================
+   ÍCONE DO OLHO
+   ========================================================= */
+
+#mostrarSenhaLogin i {
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   BOTÃO CONTINUAR
+   ========================================================= */
+
+#btnLogin {
+    width: 100%;
+
+    height: 50px;
+
+    padding: 10px;
+
+    margin-top: 5px;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    color: #ffffff;
+
+    background: #ff9100;
+
+    border: none;
+
+    border-radius: 100px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.10);
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/* =========================================================
+   HOVER CONTINUAR
+   ========================================================= */
+
+#btnLogin:hover {
+    background: #ff7904;
+
+    transform: scale(1.02);
+}
+
+
+/* =========================================================
+   CLICK CONTINUAR
+   ========================================================= */
+
+#btnLogin:active {
+    transform: scale(0.97);
+
+    background: #ff9100;
+}
+
+
+/* =========================================================
+   TEXTO "NÃO TEM UMA CONTA?"
+   ========================================================= */
+
+#login p {
+    width: 100%;
+
+    text-align: center;
+
+    font-size: 15px;
+
+    color: #666;
+
+    margin-top: 5px;
+}
+
+
+/* =========================================================
+   LINK CRIAR CONTA
+   ========================================================= */
+
+#criarConta {
+    color: #ff9100;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+
+#criarConta:hover {
+    color: #d86f00;
+
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    width: 100%;
+
+    min-height: 10vh;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: flex-end;
+
+    padding: 15px 100px;
+
+    background: #ff9100;
+}
+
+
+/* =========================================================
+   REDES SOCIAIS
+   ========================================================= */
+
+.redes-sociais {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+}
+
+
+/* =========================================================
+   ÍCONES SOCIAIS
+   ========================================================= */
+
+.icone-social {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+
+    background: #ff9100;
+
+    border-radius: 50%;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease;
+}
+
+
 .icone-social:hover {
     transform: scale(1.1);
-    /* Aumenta levemente de tamanho */
-    background-color: #945502;
-    /* Clarea levemente o fundo */
+
+    background: #945502;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    main {
+        min-height: 90vh;
+
+        padding: 20px 15px;
+    }
+
+
+    #login {
+        width: 100%;
+
+        padding: 35px 25px;
+    }
+
+
+    #logo {
+        width: 190px;
+    }
+
+
+    #login h2 {
+        font-size: 26px;
+    }
+
+
+    footer {
+        justify-content: center;
+
+        padding: 15px;
+    }
+
 }
